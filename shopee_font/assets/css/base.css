@@ -91,7 +91,11 @@ html {
     display: flex;
 }
 .ds-none {
-    display: none;
+    display: none !important;
+}
+.ds-fl
+{
+    display: flex !important; 
 }
 /* BUTTON STYLE */
 .btn {

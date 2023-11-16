@@ -156,16 +156,16 @@
                 <a href="#" class="header__link dangnhap-js">Đăng nhập</a>
               </li>
               <!-- USER -->
-              <!-- <li class="header__item header__user">
+              <li class="header__item header__user">
                             <img src="./assets/img/user.png" alt="" class="user__avatar">
                             <span class="user__name">Minh Nhật</span>
                             <ul class="header__user-list">
-                                <li class="user__item"><a href="">Tài khoản của tôi</a></li>
-                                <li class="user__item"><a href="">Địa chỉ của tôi</a></li>
-                                <li class="user__item"><a href="">Đơn mua</a></li>
-                                <li class="user__item user__item-separate"><a href="">Đăng xuất</a></li>
+                                <li class="user__item"><a href="#">Tài khoản của tôi</a></li>
+                                <li class="user__item"><a href="#">Địa chỉ của tôi</a></li>
+                                <li class="user__item"><a href="#">Đơn mua</a></li>
+                                <li class="user__item user__item-separate" onclick="logout()"><a href="#">Đăng xuất</a></li>
                             </ul>
-                        </li> -->
+                        </li>
             </ul>
           </nav>
           <!-- HEADER WITH SEARCH -->
@@ -470,7 +470,7 @@
               </div>
             </div>
             <div class="modal__controls">
-              <button class="btn btn--primary" onclick="login()">
+              <button class="btn btn--primary dangnhap_user-js" onclick="login()">
                 ĐĂNG NHẬP
               </button>
             </div>
@@ -1509,6 +1509,10 @@
           event.stopPropagation();
         });
       }
+
+      
+      
+      
     </script>
     <script src="login.js"></script>
   </body>

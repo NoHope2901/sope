@@ -24,10 +24,20 @@ function register() {
       .then((response) => response.text())
       .then((data) => console.log(data)) // Log kết quả từ server (có thể thay bằng xử lý khác)
       .catch((error) => console.error("Lỗi:", error));
-      alert('Bạn đã đăng ký thành công')
+
   } else alert("password confirm is incorrect!");
 }
-
+function logout(){
+  const user = document.querySelector('.header__user')
+  user.classList.remove('ds-fl')
+  for(dangky of dangkys) {
+    dangky.classList.remove('ds-none')
+  }
+  
+  for(dangnhap of dangnhaps) {
+    dangnhap.classList.remove('ds-none')
+  }
+}
 function login() {
   //event.preventDefault();
   const email = document.getElementById("email_log").value;
@@ -37,7 +47,15 @@ function login() {
   for (const authForm of authForms) {
     authForm.classList.remove("ds-none");
   }
-
+  const user = document.querySelector('.header__user')
+  user.classList.add('ds-fl')
+  for(dangky of dangkys) {
+    dangky.classList.add('ds-none')
+  }
+  
+  for(dangnhap of dangnhaps) {
+    dangnhap.classList.add('ds-none')
+  }
   // Gửi thông tin đăng nhập lên server
   fetch("http://localhost:3000/login", {
     method: "POST",
